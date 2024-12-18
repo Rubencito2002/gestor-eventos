@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+/* Definición de la paleta de colores */
+:root {
+    /* Colores de la paleta */
+    --primary-color: #4C6B8C;  /* Azul suave */
+    --secondary-color: #2F3C4C; /* Gris oscuro */
+    --background-color: #F5F5F5; /* Fondo gris claro */
+    --card-background: #ffffff; /* Fondo blanco para tarjetas */
+    --text-primary: #333333; /* Gris oscuro */
+    --text-secondary: #666666; /* Gris medio */
+    --action-color: #28A745; /* Verde suave */
+    --alert-color: #DC3545; /* Rojo suave */
+    --navbar-bg-color: #343a40;  /* Fondo oscuro para el navbar */
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--background-color) !important;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* 
+.container {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+} 
+*/
+
+/* Estilos para los encabezados */
+h2 {
+    color: var(--primary-color);  /* Azul */
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-bg-color) !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-brand .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+/* Card */
+.card {
+    background-color: var(--card-background);
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+    border-color: darken(var(--secondary-color), 10%);
+}
+
+.btn-success {
+    background-color: var(--action-color);
+    border-color: var(--action-color);
+}
+
+.btn-danger {
+    background-color: var(--alert-color);
+    border-color: var(--alert-color);
+}
+
+/* Estilo de la tabla */
+.table {
+    background-color: var(--card-background);
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Alertas */
+.alert-info {
+    background-color: var(--alert-color);
+    color: #00796b;
+    font-weight: 600;
+}

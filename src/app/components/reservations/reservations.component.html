@@ -1,10 +1,13 @@
 <div class="container mt-4">
     <div *ngIf="event">
         <h2>Reservas para: {{ event.title }}</h2>
+        <p> {{ event.description }} </p>
         <p><strong>Fecha:</strong> {{ event.date }}</p>
+        <p><strong>Hora:</strong> {{ event.time }}</p>
+        <p><strong>Ubicación:</strong> {{ event.location }}</p>
         <p><strong>Asistentes:</strong> {{ event.currentAttendees }} / {{ event.maxAttendees }}</p>
     
-        <button *ngIf="event.currentAttendees < event.maxAttendees" (click)="onReserve()" class="btn btn-primary">
+        <button *ngIf="event.currentAttendees < event.maxAttendees" (click)="onReserve()" class="btn btn-secondary">
             Reservar lugar
         </button>
     

@@ -1,10 +1,10 @@
 <div class="container mt-4">
-    <h2>Lista de Reservas</h2>
+    <h2 class="text-center">Lista de Reservas</h2>
     <div *ngIf="reservations.length === 0" class="alert alert-info">
         No hay reservas disponibles.
     </div>
 
-    <table class="table table-striped" *ngIf="reservations.length > 0">
+    <table class="table table-hover table-bordered" *ngIf="reservations.length > 0">
         <thead>
             <tr>
                 <th>Evento</th>
