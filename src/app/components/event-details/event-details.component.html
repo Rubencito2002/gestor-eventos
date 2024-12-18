@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <h2>Detalles del Evento</h2>
+    <div class="card">
+        <img [src]="event?.image || 'assets/placeholder.png'" class="card-img-top" alt="Imagen del evento">
+        <div class="card-body">
+            <h5 class="card-title">{{ event?.title }}</h5>
+            <p class="card-text">{{ event?.description }}</p>
+            <p><strong>Fecha:</strong> {{ event?.date }}</p>
+            <p><strong>Hora:</strong> {{ event?.time }}</p>
+            <p><strong>Ubicación:</strong> {{ event?.location }}</p>
+            <p><strong>Aforo máximo:</strong> {{ event?.maxAttendees }}</p>
+            <p><strong>Asistentes actuales:</strong> {{ event?.currentAttendees }}</p>
+            <button class="btn btn-primary" (click)="goBack()">Volver</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h2>Lista de Reservas</h2>
+    <div *ngIf="reservations.length === 0" class="alert alert-info">
+        No hay reservas disponibles.
+    </div>
+
+    <table class="table table-striped" *ngIf="reservations.length > 0">
+        <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Asientos Reservados</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reservation of reservations">
+            <td>{{ reservation.id }}</td>
+            <td>{{ reservation.userName }}</td>
+            <td>{{ reservation.email }}</td>
+            <td>{{ reservation.phone }}</td>
+            <td>{{ reservation.numberOfSeats }}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="deleteReservation(reservation.id)">
+                    Eliminar
+                </button>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

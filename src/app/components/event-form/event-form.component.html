@@ -1,0 +1,27 @@
+<div class="container mt-4">
+    <h2>{{ isEditing ? 'Editar Evento' : 'Crear Evento' }}</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Título</label>
+            <input id="title" [(ngModel)]="event.title" name="title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea id="description" [(ngModel)]="event.description" name="description" class="form-control" required></textarea>
+        </div>
+
+        <!-- Campo para la foto (no obligatorio) -->
+        <div class="mb-3">
+            <label for="image" class="form-label">Foto del Evento</label>
+            <input type="file" id="image" (change)="onFileChange($event)" class="form-control">
+        </div>
+
+        <!-- Campo para la fecha -->
+        <div class="mb-3">
+            <label for="date" class="form-label">Fecha del Evento</label>
+            <input type="date" id="date" [(ngModel)]="event.date" name="date" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+</div>

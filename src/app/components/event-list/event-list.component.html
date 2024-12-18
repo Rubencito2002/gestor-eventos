@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h2 class="text-center">Lista de Eventos</h2>
+    <div *ngIf="events.length === 0" class="text-center mt-4">
+      <p>No hay eventos disponibles.</p>
+      <a routerLink="/create-event" class="btn btn-primary">Agregar Evento</a>
+    </div>
+  
+    <div *ngIf="events.length > 0" class="row">
+      <div *ngFor="let event of events" class="col-md-4 mb-4">
+        <div class="card">
+          <img [src]="event.image" class="card-img-top" alt="Event image">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.title }}</h5>
+            <p class="card-text">{{ event.description }}</p>
+            <p><strong>Fecha:</strong> {{ event.date }}</p>
+            <p><strong>Hora:</strong> {{ event.time }}</p>
+            <p><strong>Ubicación:</strong> {{ event.location }}</p>
+            <p><strong>Asistentes actuales:</strong> {{ event.currentAttendees }}</p>
+            <a routerLink="/event-details/{{ event.id }}" class="btn btn-info btn-sm">Detalles</a>
+            <a routerLink="/reservations/{{ event.id }}" class="btn btn-info btn-sm">Reservas</a>
+            <button (click)="deleteEvent(event.id)" class="btn btn-danger btn-sm">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
